@@ -10,6 +10,7 @@ const List = ({ token, setShowEdit }) => {
   const navigate = useNavigate();
 
   const fetchList = async () => {
+    setShowEdit(false);
     try {
       const response = await axios.get(backendUrl + '/api/product/list');
       if (response.data.success) {
