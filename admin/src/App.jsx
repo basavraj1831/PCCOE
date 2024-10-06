@@ -24,11 +24,11 @@ const App = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
+          <ToastContainer />
       {token === "" ? (
         <Login setToken={setToken} />
       ) : (
         <>
-          <ToastContainer />
           <Navbar setToken={setToken} />
           <hr />
           <div className="flex w-full">
