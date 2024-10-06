@@ -5,10 +5,13 @@ import { backendUrl, currency } from "../App";
 import { toast } from "react-toastify";
 import { assets } from "../assets/assets";
 
-const Orders = ({ token }) => {
+const Orders = ({ token, setShowEdit }) => {
   const [orders, setOrders] = useState([]);
 
   const fetchAllOrders = async () => {
+
+    setShowEdit(false);
+
     if (!token) {
       return null;
     }
