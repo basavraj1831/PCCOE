@@ -14,8 +14,13 @@ const Login = ({setToken}) => {
             const response = await axios.post(backendUrl + '/api/user/admin',{email, password});
             if (response.data.success) {
               setToken(response.data.token);
+              toast.success('Login Successful',{
+                className: 'toast-custom'
+              })
             } else {
-             toast.error(response.data.message) 
+             toast.error('Invalid Credentials',{
+              className: 'toast-custom'
+             }) 
             }
         } catch (error) {
             toast.error(error.message) 
