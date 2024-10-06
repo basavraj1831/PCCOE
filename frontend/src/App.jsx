@@ -15,7 +15,7 @@ import SearchBar from './components/SearchBar';
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
-const App1 = () => {
+const App = () => {
   return (
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
       <ToastContainer/>
@@ -37,4 +37,4 @@ const App1 = () => {
   )
 }
 
-export default App1
+export default App
